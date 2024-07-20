@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/styles.css"> <!-- Link to your CSS file -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio Site</title>
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/21189373?v=4">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-            </ul>
-        </nav>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Rupak Bhandari</span>
+            </h1>
+        </div>              
     </header>
-
-    <main>
-        <h2>Blog Posts</h2>
-        <ul>
-            {% for post in site.posts %}
-                <li>
-                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                    <p>{{ post.excerpt }}</p>
-                    <small>Posted on {{ post.date | date: "%B %d, %Y" }}</small>
-                </li>
-            {% endfor %}
-        </ul>
-    </main>
-
-    <footer>
-        <p>&copy; {{ site.year }} {{ site.author }}. All rights reserved.</p>
-    </footer>
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <div class="about-caption raisedbox">
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <h4 class="section-subtitle">Who Am I ?</h4>
+                    <p id="title1">
+                        An eternal truth seeker in the quest of clarity. I am a keen tech-enthusiast with deep interests in cloud computing, data-science, machine learning and information security. Currently, I 'm simulataneously learning and applying Python and cloud concepts, and learning about information security and Linux to gain the mastery in a Linux System Administration. Also, I 'm a fresh graduate of the AWS re/Start. As a learner from the very first cohort of the AWS Restart Program from Nepal, not only did I got the opportunity to learn about the foundations of cloud computing but also the practical real-world implementation of cloud computing through the combination of myriad services and features I was lucky to get acquainted with.          
+                    </p>
+                </div>              
+            </div>
+        </div>
+    </section>
+    <section class="section" id="blog">
+        <div class="container text-center raisedbox">
+            <h6 class="section-title mb-6">Blog</h6>
+            <h3 class="section-subtitle">Go through my recent posts here...</h3>
+            <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@rupakbhandari"
+            data-maxcols="3" 
+            data-layout="grid" 
+            data-poststyle="inline" 
+            data-readmore="Read the rest" 
+            data-buttonclass="btn btn-primary" 
+            data-offset="-100">
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; Rupak Bhandari</p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://twitter.com/RupakTweetsHere" class="link" target="_blank"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/in/link-to-rupak/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
+                <a href="https://github.com/irkghub" class="link"><i class="ti-github"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
 </body>
 </html>
